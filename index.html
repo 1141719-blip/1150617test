@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>王曉明｜自我介紹</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #f8f9fc;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f172a, #1e3a8a);
+      color: #fff;
+      padding: 48px 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 3.8vw, 3.5rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      color: #dbeafe;
+      max-width: 58ch;
+      font-size: 1rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .hero-tags span {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #93c5fd, #2563eb);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .profile-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .profile-card p {
+      color: #dbeafe;
+      font-size: 0.95rem;
+    }
+
+    main {
+      padding: 56px 0;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: var(--text);
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 70%;
+      background: var(--primary);
+      border-radius: 999px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-grid p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .info-list div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-pill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #bfdbfe;
+      padding-left: 18px;
+    }
+
+    .timeline-item h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .timeline-item span {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-box a {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 0 48px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .about-grid,
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-card {
+        padding: 24px 18px;
+      }
+
+      .hero {
+        gap: 24px;
+      }
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>您好，我是王曉明</h1>
+        <p>我是一名熱愛學習與解決問題的專業人士，專注於網頁開發、品牌設計與使用者體驗優化。希望透過持續努力，把想法轉化成有價值的成果。</p>
+        <div class="hero-tags">
+          <span>Web Development</span>
+          <span>UI / UX</span>
+          <span>Team Collaboration</span>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="avatar">WM</div>
+        <h3>王曉明</h3>
+        <p>前端開發者｜設計思維者</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="section-card about-grid">
+          <div>
+            <h2 class="section-title">關於我</h2>
+            <p>我擅長將複雜的想法轉化為簡潔且易用的產品。我相信好的設計不只是外觀，而是能真正提升使用者體驗的解決方案。</p>
+            <p>在工作中，我重視溝通、細節與效率，並始終保持對新技術與新知識的探索熱情。</p>
+          </div>
+          <div class="info-list">
+            <div><strong>姓名</strong><span>陳泊辰</span></div>
+            <div><strong>職業</strong><span>前端開發者</span></div>
+            <div><strong>地點</strong><span>台灣</span></div>
+            <div><strong>Email</strong><span>example@email.com</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-card">
+          <h2 class="section-title">技能專長</h2>
+          <div class="skills">
+            <div class="skill-pill">HTML / CSS</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">React</div>
+            <div class="skill-pill">UI Design</div>
+            <div class="skill-pill">Responsive Web</div>
+            <div class="skill-pill">Problem Solving</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-card">
+          <h2 class="section-title">經歷與成長</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>2024 ~ 現在</span>
+              <h4>前端開發實習生</h4>
+              <p>負責網站頁面開發、維護與使用者介面優化，並參與專案流程與跨團隊合作。</p>
+            </div>
+            <div class="timeline-item">
+              <span>2022 ~ 2024</span>
+              <h4>產品設計助理</h4>
+              <p>協助整理需求、規劃流程、製作原型，提升產品可用性與整體使用體驗。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-card">
+          <h2 class="section-title">聯絡方式</h2>
+          <div class="contact-box">
+            <a href="mailto:example@email.com">Email</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> 王曉明｜感謝您的瀏覽</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
